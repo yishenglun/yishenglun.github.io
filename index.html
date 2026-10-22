@@ -1,50 +1,135 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yishenglun 的个人主页</title>
-  <style>
-    body {
-      margin: 0;
-      background: #f4f6fa;
-      color: #263247;
-      font-family: system-ui, sans-serif;
-      line-height: 1.8;
-    }
-    main {
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 36px;
-      background: white;
-      border-radius: 20px;
-    }
-    h1 { color: #1d4ed8; }
-    h2 { margin-top: 32px; }
-    a { color: #2563eb; }
-    @media (max-width: 600px) {
-      main { margin: 20px 12px; padding: 24px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shenglun Yi, Associate Professor at the National University of Defense Technology (NUDT). Robust estimation, Kalman filtering, system identification, and autonomous navigation.">
+<meta name="color-scheme" content="light">
+<title>Shenglun Yi | National University of Defense Technology</title>
+<style>
+:root { --ink:#292929; --muted:#686868; --link:#144e9a; --rule:#b8b8b8; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:28px; }
+body { margin:0; background:#fff; color:var(--ink); font-family:Georgia,"Times New Roman",serif; font-size:17px; line-height:1.65; }
+main { max-width:1020px; margin:0 auto; padding:68px 34px 36px; }
+a { color:var(--link); text-decoration-thickness:1px; text-underline-offset:3px; }
+a:hover { color:#073365; }
+a:focus-visible { outline:2px solid var(--link); outline-offset:5px; }
+.skip { position:absolute; left:20px; top:-60px; background:white; padding:8px; }
+.skip:focus { top:10px; }
+header { padding-bottom:15px; }
+.profile-header { display:flex; align-items:center; gap:38px; }
+.portrait { display:block; width:260px; height:280px; object-fit:cover; object-position:50% 50%; flex-shrink:0; }
+.profile-details { min-width:0; }
+h1 { margin:0 0 15px; font-size:35px; line-height:1.25; }
+.position { font-size:20px; margin:0 0 6px; }
+.affiliation { margin:0; }
+.profile-links { margin:15px 0 0; font-size:16px; }
+nav { display:flex; flex-wrap:wrap; gap:8px 23px; margin-top:24px; padding-top:15px; border-top:1px solid #e3e3e3; font-size:15px; }
+nav a { text-decoration:none; }
+section { margin-top:30px; }
+h2 { font-size:25px; line-height:1.3; margin:0 0 17px; border-bottom:1px solid var(--rule); padding-bottom:8px; }
+p { margin:0 0 14px; }
+.bio { text-align:justify; }
+.interests { margin-bottom:0; }
+.news { list-style:none; margin:0; padding:0 14px 0 0; max-height:260px; overflow-y:auto; scrollbar-width:thin; scrollbar-color:#b8b8b8 transparent; }
+.news:focus-visible { outline:2px solid var(--link); outline-offset:5px; }
+.news li { display:grid; grid-template-columns:98px 1fr; gap:18px; margin:10px 0; }
+.news time { color:var(--muted); font-variant-numeric:tabular-nums; }
+.publication-group { font-size:18px; font-weight:normal; color:var(--muted); margin:27px 0 15px; }
+.publication-group:first-of-type { margin-top:0; }
+article { margin-bottom:23px; padding-left:17px; border-left:2px solid #e6e9ed; }
+article h4 { font-size:17px; line-height:1.45; margin:0 0 4px; }
+article p { margin:0; font-size:15px; line-height:1.65; }
+.venue { color:#535353; font-style:italic; }
+article h4 a { color:inherit; text-decoration:none; }
+article h4 a:hover { color:var(--link); text-decoration:underline; }
+article .paper-links { margin-top:5px; }
+.status { font-style:normal; color:#8b4b17; }
+#project { min-height:105px; }
+.project-item h3 { font-size:17px; line-height:1.45; margin:0 0 6px; }
+.project-item p { color:var(--muted); }
+footer { margin-top:40px; border-top:1px solid #dedede; padding-top:15px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:16px; }
+@media(max-width:600px) {
+.profile-header { flex-direction:column; align-items:flex-start; gap:24px; }
+.portrait { width:240px; max-width:100%; height:260px; }
+main { padding:34px 22px 26px; } body { font-size:16px; line-height:1.7; }
+h1 { font-size:30px; } h2 { font-size:23px; } .position { font-size:18px; }
+.bio { text-align:left; } .news li { grid-template-columns:77px 1fr; gap:10px; }
+nav { gap:8px 19px; } article { padding-left:12px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { .news { max-height:none; overflow:visible; } main { padding:0; max-width:none; } nav,.skip,footer { display:none; } article { break-inside:avoid; } a { color:inherit; } }
+</style>
 </head>
 <body>
-  <main>
-    <h1>你好，我是 Yishenglun 👋</h1>
-    <p>欢迎来到我的个人主页。</p>
-
-    <h2>关于我</h2>
-    <p>这里将介绍我的教育背景、研究方向与个人经历。</p>
-
-    <h2>项目与成果</h2>
-    <ul>
-      <li>项目一：待补充。</li>
-      <li>项目二：待补充。</li>
-    </ul>
-
-    <h2>联系我</h2>
-    <p>
-      <a href="https://github.com/yishenglun">访问我的 GitHub</a>
-    </p>
-  </main>
+<a class="skip" href="#bio">Skip to content</a>
+<main id="top">
+<header>
+<div class="profile-header">
+<img class="portrait" src="assets/shenglun-yi.jpg" alt="Shenglun Yi by a lake" width="260" height="280">
+<div class="profile-details">
+<h1>Shenglun Yi</h1>
+<p class="position">XX青年科技英才</p>
+<p class="position">Associate Professor</p>
+<p class="affiliation">National University of Defense Technology (NUDT)</p>
+<p class="contact">Email: <a href="mailto:yishenglun@nudt.edu.cn">yishenglun@nudt.edu.cn</a></p>
+<p class="profile-links"><a href="https://scholar.google.com/citations?user=FVt36WoAAAAJ&amp;hl=zh-CN">Google Scholar</a></p>
+</div>
+</div>
+<nav aria-label="Page sections"><a href="#bio">Brief Bio</a><a href="#news">News</a><a href="#publications">Publications</a><a href="#project">Project</a></nav>
+</header>
+<section id="bio" aria-labelledby="bio-title">
+<h2 id="bio-title">Brief Bio</h2>
+<p class="bio">I am an Associate Professor at the National University of Defense Technology (NUDT). Previously, I held a Researcher (Type B Senior) position in the Department of Information Engineering at the University of Padova, which I took up in 2025. Prior to that, I was a Researcher (Type B Junior) in the same department from 2023 to 2024 and a postdoctoral researcher from 2022 to 2023. I was also a visiting scholar in the department from 2019 to 2021. I received my doctoral degree in Control Science and Engineering from Beijing Institute of Technology.</p>
+<p class="bio">My research focuses on <strong>game-theoretic approaches to robust state estimation</strong> for uncertain dynamical systems. I also develop estimation and identification methods for <strong>tracking</strong> and <strong>navigation</strong> of <strong>unmanned systems</strong>, including unmanned surface vehicles (USVs) and unmanned aerial vehicles (UAVs).</p>
+<p class="interests"><strong>Research interests:</strong> Robust estimation; identification theory; unmanned systems; signal processing; machine learning; deep learning.</p>
+</section>
+<section id="news" aria-labelledby="news-title">
+<h2 id="news-title">News</h2>
+<ul class="news" tabindex="0" aria-label="News, scroll to read more">
+<li><time datetime="2026-07">2026.07</time><span>Two papers are accepted to ECC, held at the University of Iceland in Reykjavík, Iceland.</span></li>
+<li><time datetime="2025-10-29">2025.10</time><span>Webinar: “A Game-Theoretic Approach to Robust State Estimation,” School of Artificial Intelligence, Zhejiang Normal University.</span></li>
+<li><time datetime="2025-09-18">2025.09</time><span>Seminar: “Game-Theoretic Approach,” School of Automation, Beijing Institute of Technology.</span></li>
+<li><time datetime="2025-07">2025.07</time><span>Presented “Data-driven robust UAV position estimation in GPS signal-challenged environment” at the American Control Conference (ACC), held at the Sheraton Denver Downtown Hotel in Denver, Colorado, USA, July 8–10, 2025.</span></li>
+<li><time datetime="2025-01">2025.01</time><span>Started my position as Researcher (Type B Senior) at the University of Padova.</span></li>
+</ul>
+</section>
+<section id="publications" aria-labelledby="publications-title">
+<h2 id="publications-title">Publications</h2>
+<!-- Statuses follow the supplied CV. No missing publication years are inferred. -->
+<h3 class="publication-group">2026</h3>
+<article><h4><a href="papers/2026-automatica-update-resilient-kalman-filtering.pdf" target="_blank" rel="noopener">An update-resilient Kalman filtering approach</a></h4><p><strong>S. Yi</strong>, M. Zorzi.</p><p class="venue">Automatica, 192: 113160, 2026. <span class="status">Regular paper.</span></p><p class="paper-links"><a href="papers/2026-automatica-update-resilient-kalman-filtering.pdf" target="_blank" rel="noopener" aria-label="Read PDF: An update-resilient Kalman filtering approach">[PDF]</a></p></article>
+<article><h4><a href="papers/2026-ejc-degenerate-robust-kalman-filters.pdf" target="_blank" rel="noopener">A Family of Degenerate Robust Kalman Filters</a></h4><p>M. Zorzi, <strong>S. Yi</strong>.</p><p class="venue">European Journal of Control, article 101562, 2026.</p><p class="paper-links"><a href="papers/2026-ejc-degenerate-robust-kalman-filters.pdf" target="_blank" rel="noopener" aria-label="Read PDF: A Family of Degenerate Robust Kalman Filters">[PDF]</a></p></article>
+<article><h4><a href="papers/2026-ecc-robust-sigma-point-filtering.pdf" target="_blank" rel="noopener">Robust Sigma-Point Filtering for Nonlinear Systems with Non-Additive Noise</a></h4><p><strong>S. Yi</strong>, M. Zorzi.</p><p class="venue">European Control Conference (ECC), 2026.</p><p class="paper-links"><a href="papers/2026-ecc-robust-sigma-point-filtering.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust Sigma-Point Filtering for Nonlinear Systems with Non-Additive Noise">[PDF]</a></p></article>
+<h3 class="publication-group">2025</h3>
+<article><h4>Optimal Control of Nonlinear Multi-input Systems with Event-Triggered</h4><p>Y. Lv, Y. Tang, <strong>S. Yi</strong>.</p><p class="venue">IEEE Data Driven Control and Learning Systems Conference (DDCLS), 2025.</p></article>
+<article><h4><a href="papers/2025-acc-robust-uav-position-estimation.pdf" target="_blank" rel="noopener">Data-driven robust UAV position estimation in GPS signal-challenged environment</a></h4><p><strong>S. Yi</strong>, X. Jin, Z. Wang, Z. Liu.</p><p class="venue">American Control Conference (ACC), 2025.</p><p class="paper-links"><a href="papers/2025-acc-robust-uav-position-estimation.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Data-driven robust UAV position estimation in GPS signal-challenged environment">[PDF]</a></p></article>
+<h3 class="publication-group">2024</h3>
+<article><h4><a href="papers/2024-sensors-switched-pedestrian-navigation.pdf" target="_blank" rel="noopener">A Switched Approach for Smartphone-Based Pedestrian Navigation</a></h4><p><strong>S. Yi</strong>, M. Zorzi, X. Jin, T. Su.</p><p class="venue">Sensors, 24(16): 5247, 2024.</p><p class="paper-links"><a href="papers/2024-sensors-switched-pedestrian-navigation.pdf" target="_blank" rel="noopener" aria-label="Read PDF: A Switched Approach for Smartphone-Based Pedestrian Navigation">[PDF]</a></p></article>
+<article><h4><a href="papers/2024-ijrnc-robust-adaptive-kalman-filter.pdf" target="_blank" rel="noopener">Robust adaptive Kalman filter for structural performance assessment</a></h4><p><strong>S. Yi</strong>, T. Su, Z. Y. Tang.</p><p class="venue">International Journal of Robust and Nonlinear Control, 34(9): 5966–5982, 2024.</p><p class="paper-links"><a href="papers/2024-ijrnc-robust-adaptive-kalman-filter.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust adaptive Kalman filter for structural performance assessment">[PDF]</a></p></article>
+<article><h4><a href="papers/2024-scl-degenerate-risk-sensitive-filters.pdf" target="_blank" rel="noopener">On the convergence of degenerate risk sensitive filters</a></h4><p>M. Zorzi, <strong>S. Yi</strong>.</p><p class="venue">Systems &amp; Control Letters, 185: 105732, 2024.</p><p class="paper-links"><a href="papers/2024-scl-degenerate-risk-sensitive-filters.pdf" target="_blank" rel="noopener" aria-label="Read PDF: On the convergence of degenerate risk sensitive filters">[PDF]</a></p></article>
+<article><h4><a href="papers/2024-cta-robust-bayesian-estimation.pdf" target="_blank" rel="noopener">Robust Bayesian estimation method for unreachable systems</a></h4><p><strong>S. Yi</strong>, X. Ren.</p><p class="venue">Control Theory &amp; Applications, 41(2): 221–228, 2024.</p><p class="paper-links"><a href="papers/2024-cta-robust-bayesian-estimation.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust Bayesian estimation method for unreachable systems">[PDF]</a></p></article>
+<h3 class="publication-group">2023</h3>
+<article><h4><a href="papers/2023-jfi-robust-fixed-lag-smoothing.pdf" target="_blank" rel="noopener">Robust fixed-lag smoothing under model perturbations</a></h4><p><strong>S. Yi</strong>, M. Zorzi.</p><p class="venue">Journal of the Franklin Institute, 360(1): 458–483, 2023.</p><p class="paper-links"><a href="papers/2023-jfi-robust-fixed-lag-smoothing.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust fixed-lag smoothing under model perturbations">[PDF]</a></p></article>
+<article><h4><a href="papers/2023-icstcc-robust-extended-kalman-smoothing.pdf" target="_blank" rel="noopener">Robust extended Kalman smoothing under model uncertainties</a></h4><p><strong>S. Yi</strong>, M. Zorzi.</p><p class="venue">27th International Conference on System Theory, Control and Computing (ICSTCC), pp. 82–87, 2023.</p><p class="paper-links"><a href="papers/2023-icstcc-robust-extended-kalman-smoothing.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust extended Kalman smoothing under model uncertainties">[PDF]</a></p></article>
+<h3 class="publication-group">2022</h3>
+<article><h4><a href="papers/2022-tac-robust-kalman-filtering.pdf" target="_blank" rel="noopener">Robust Kalman filtering under model uncertainty: The case of degenerate densities</a></h4><p><strong>S. Yi</strong>, M. Zorzi.</p><p class="venue">IEEE Transactions on Automatic Control, 67(7): 3458–3471, 2022. <span class="status">Full paper.</span></p><p class="paper-links"><a href="papers/2022-tac-robust-kalman-filtering.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust Kalman filtering under model uncertainty: The case of degenerate densities">[PDF]</a></p></article>
+<h3 class="publication-group">2021</h3>
+<article><h4><a href="papers/2021-acc-tuned-liquid-damper-robust-ekf.pdf" target="_blank" rel="noopener">Learning the tuned liquid damper dynamics by means of a robust EKF</a></h4><p>A. Longhini, M. Perbellini, S. Gottardi, <strong>S. Yi</strong>, et al.</p><p class="venue">American Control Conference (ACC), pp. 60–65, 2021.</p><p class="paper-links"><a href="papers/2021-acc-tuned-liquid-damper-robust-ekf.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Learning the tuned liquid damper dynamics by means of a robust EKF">[PDF]</a></p></article>
+<h3 class="publication-group">2020</h3>
+<article><h4><a href="papers/2020-cisc-robust-online-filter.pdf" target="_blank" rel="noopener">Robust Online Filter Based on a Second-Order Adaptive Model</a></h4><p><strong>S. Yi</strong>, X. Ren.</p><p class="venue">Chinese Intelligent Systems Conference, Singapore: Springer Singapore, pp. 691–698, 2020.</p><p class="paper-links"><a href="papers/2020-cisc-robust-online-filter.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Robust Online Filter Based on a Second-Order Adaptive Model">[PDF]</a></p></article>
+<article><h4><a href="papers/2020-cdc-low-rank-kalman-filtering.pdf" target="_blank" rel="noopener">Low-rank Kalman filtering under model uncertainty</a></h4><p><strong>S. Yi</strong>, M. Zorzi.</p><p class="venue">59th IEEE Conference on Decision and Control (CDC), pp. 2930–2935, 2020.</p><p class="paper-links"><a href="papers/2020-cdc-low-rank-kalman-filtering.pdf" target="_blank" rel="noopener" aria-label="Read PDF: Low-rank Kalman filtering under model uncertainty">[PDF]</a></p></article>
+</section>
+<section id="project" aria-labelledby="project-title">
+<h2 id="project-title">Project</h2>
+<article class="project-item"><h3>Game-Theoretic State Estimation under Model Uncertainty</h3><p><strong>Role:</strong> Principal Investigator (PI) &nbsp;|&nbsp; <strong>Period:</strong> 2026.09–Present &nbsp;|&nbsp; <strong>Budget:</strong> RMB 2 million</p></article>
+<article class="project-item"><h3>RT-KalmanNet: A Robust Tailored Neural Network Aided Kalman Filtering Approach</h3><p><strong>Role:</strong> Principal Investigator (PI) &nbsp;|&nbsp; <strong>Period:</strong> 2024.12–2026.09 &nbsp;|&nbsp; <strong>Budget:</strong> Approx. RMB 400,000</p></article>
+<article class="project-item"><h3>Robust Navigation for Unmanned Aerial Vehicles</h3><p><strong>Role:</strong> Principal Investigator (PI) &nbsp;|&nbsp; <strong>Period:</strong> 2023.03–2025.03 &nbsp;|&nbsp; <strong>Budget:</strong> Approx. RMB 400,000</p></article>
+<article class="project-item"><h3>Autonomous Underwater Fleets: From AUVs to AUFs through Adaptive Communication and Cooperation Schemes</h3><p><strong>Role:</strong> Participant &nbsp;|&nbsp; <strong>Period:</strong> 2020.08–2025.08 &nbsp;|&nbsp; <strong>Budget:</strong> Approx. RMB 10.38 million</p></article>
+<article class="project-item"><h3>Robust Filtering for Nonlinear Systems under Model Uncertainty</h3><p><strong>Role:</strong> Principal Investigator (PI) &nbsp;|&nbsp; <strong>Period:</strong> 2022.08–2022.11 &nbsp;|&nbsp; <strong>Budget:</strong> Approx. RMB 40,000</p></article>
+</section>
+<footer><span>Shenglun Yi · NUDT</span><a href="#top">Back to top ↑</a></footer>
+</main>
 </body>
 </html>
